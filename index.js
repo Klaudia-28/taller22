@@ -16,16 +16,14 @@ const h = parseInt(document.getElementById("h").value);
 const k = parseInt(document.getElementById("k").value);
 const r = parseInt(document.getElementById("r").value);
 limpiarCanvas();
-}
-
-
-
-ctx.fillStyle ="blue";
-
 //uso de la ecuacion 
-for (let x=0;x<canvas.clientWidth;x++){
+for (let x=0;x<canvas.width;x++){
     let y = Math.sqrt(r*r - (x-h)*(x-h))+k;
     ctx.fillRect(x,y,1,1);
     let y2 = -Math.sqrt(r*r - (x-h)*(x-h))+k;
     ctx.fillRect(x,y2,1,1);
 }
+}
+
+ctx.fillStyle ="blue";
+
