@@ -16,6 +16,8 @@ const h = parseInt(document.getElementById("h").value);
 const k = parseInt(document.getElementById("k").value);
 const r = parseInt(document.getElementById("r").value);
 limpiarCanvas();
+//color del dibujo
+ctx.fillStyle ="blue";
 //uso de la ecuacion 
 for (let x=0;x<canvas.width;x++){
     let y = Math.sqrt(r*r - (x-h)*(x-h))+k;
@@ -25,5 +27,4 @@ for (let x=0;x<canvas.width;x++){
 }
 }
 
-ctx.fillStyle ="blue";
 
