@@ -1,5 +1,6 @@
+//obtiene el canvas
 const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d")
+const ctx = canvas.getContext("2d")//dibuja en 2d
 //prueba de dibujo
 ctx.fillRect(50,50,50,50);
 
@@ -8,10 +9,16 @@ function limpiarCanvas(){
     ctx.clearRect(0,0,canvas.clientWidth, canvas.height);
 }
 
-//definir variables 
-const h = 200;//centro en x
-const k = 200;//centro en y
-const r = 200;//radio
+//funcion para dibujar la circunferencia
+function dibujarCircunferencia(){
+//obtener valores 
+const h = parseInt(document.getElementById("h").value);
+const k = parseInt(document.getElementById("k").value);
+const r = parseInt(document.getElementById("r").value);
+limpiarCanvas();
+}
+
+
 
 ctx.fillStyle ="blue";
 
