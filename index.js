@@ -13,6 +13,8 @@ const h = 200;//centro en x
 const k = 200;//centro en y
 const r = 200;//radio
 
+ctx.fillStyle ="blue";
+
 //uso de la ecuacion 
 for (let x=0;x<canvas.clientWidth;x++){
     let y = Math.sqrt(r*r - (x-h)*(x-h))+k;

@@ -2,11 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--título de la pestaña-->
     <title>Generador de circunferencia</title>
 </head>
 <body>
-    <!--título-->
-    <h1>Dibujo de circunferencia</h1>
+    <!--título aplicación-->
+    <h1 align="center">Generador de circunferencia</h1>
+    <!--explicacion del programa-->
+    <p align="center">
+        Dibujo de circunferencia usando ecuación (x - h)² + (y - k)² = r²</p>
+    <!--ingreso datos por parte del usuario-->
+    <h3 align="center">Ingreso de datos</h3>
+    <center>
+        <table>
+        <tr>
+        <th>Dato</th>
+        <th>Valor</th>
+    </tr>
+   <!--centro x-->
+    <tr>
+    <td>Centro X (h)</td>
+    <td><input type="number" id="h" value="250"></td>
+    </tr>
+    <tr>
+    <!--centro y-->  
+    <td>Centro Y (k)</td>
+    <td><input type="number" id="k" value="250"></td>
+</tr>
+    <!--radio-->
+    <tr>
+    <td>Radio (r)</td>
+    <td><input type="number" id="r" value="100"></td>
+</tr>
+</table>
+</center>
+
     <canvas id"canvas" width="400" height="400">
     </canvas>
     <script src="index.js">
