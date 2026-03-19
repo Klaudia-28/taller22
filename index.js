@@ -17,7 +17,7 @@ function dda(x1, y1, x2, y2){
     let y =y1;
 
     for(let i = 0; i <= pasos; i++){
-        ctx.fillRect(Math.round(x), Math.round(y), 1, 1);
+        ctx.fillRect(Math.round(x), Math.round(y), 3, 3);
         x += xIncremento;
         y += yIncremento;
     }
