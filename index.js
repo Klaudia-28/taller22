@@ -12,3 +12,11 @@ function limpiarCanvas(){
 const h = 200;//centro en x
 const k = 200;//centro en y
 const r = 200;//radio
+
+//uso de la ecuacion 
+for (let x=0;x<canvas.clientWidth;x++){
+    let y = Math.sqrt(r*r - (x-h)*(x-h))+k;
+    ctx.fillRect(x,y,1,1);
+    let y2 = -Math.sqrt(r*r - (x-h)*(x-h))+k;
+    ctx.fillRect(x,y2,1,1);
+}
