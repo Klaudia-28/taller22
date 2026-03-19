@@ -30,16 +30,31 @@ const k = parseInt(document.getElementById("k").value);
 const r = parseInt(document.getElementById("r").value);
 limpiarCanvas();
 //color del dibujo
-ctx.fillStyle ="black";
+ctx.fillStyle ="purple";
+//guardar el punto anterior del círculo
+let xAnterior = null;
+let yAnterior = null;
+let y2Anterior = null;
+
 //uso de la ecuacion 
 for (let x=0;x<canvas.width;x++){
     let valor = r*r - (x - h)*(x - h);
-    //validacion del valor
+    //validacion del valor por si hay raiz negativa
         if (valor >= 0) {
         let y = Math.sqrt(valor) + k;
         ctx.fillRect(x, y, 1, 1);
         let y2 = -Math.sqrt(valor) + k;
         ctx.fillRect(x, y2, 1, 1);
+    //dibujar con dda
+        if(xAnterior !== null){
+            //parte superior
+            dda(xAnterior, yAnterior, x, y);
+            //parte inferior
+            dda(xAnterior, y2Anterior, x, y2);
+        }
+        xAnterior = x;
+        yAnterior = y;
+        y2Anterior = y2;
     }
 }
 }
