@@ -6,7 +6,7 @@ ctx.fillRect(50,50,50,50);
 
 //limpiar el canvas
 function limpiarCanvas(){
-    ctx.clearRect(0,0,canvas.clientWidth, canvas.height);
+    ctx.clearRect(0,0,canvas.width, canvas.height);
 }
 
 //funcion para dibujar la circunferencia
