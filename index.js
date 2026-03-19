@@ -20,10 +20,16 @@ limpiarCanvas();
 ctx.fillStyle ="blue";
 //uso de la ecuacion 
 for (let x=0;x<canvas.width;x++){
-    let y = Math.sqrt(r*r - (x-h)*(x-h))+k;
-    ctx.fillRect(x,y,1,1);
-    let y2 = -Math.sqrt(r*r - (x-h)*(x-h))+k;
-    ctx.fillRect(x,y2,1,1);
+    let valor = r*r - (x - h)*(x - h);
+    //validacion del valor
+        if (valor >= 0) {
+
+        let y = Math.sqrt(valor) + k;
+        ctx.fillRect(x, y, 1, 1);
+
+        let y2 = -Math.sqrt(valor) + k;
+        ctx.fillRect(x, y2, 1, 1);
+    }
 }
 }
 
